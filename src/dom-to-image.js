@@ -403,8 +403,10 @@
 
         function asArray(arrayLike) {
             var array = [];
-            var length = arrayLike.length;
-            for (var i = 0; i < length; i++) array.push(arrayLike[i]);
+            if(arrayLike && arrayLike.length) {
+                var length = arrayLike.length;
+                for (var i = 0; i < length; i++) array.push(arrayLike[i]);
+            }
             return array;
         }
 
